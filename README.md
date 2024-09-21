@@ -20,23 +20,21 @@ git clone https://github.com/nishanth-s-dev/AlgoExpert.git
 
 ## Folder Structure
 ```
-        AlgoExpert/
-        ├── README.md
-        ├── Python/
-        │   ├── Easy/
-        │   │   ├── problem_one.py
-        │   │   └── problem_two.py
-        │   ├── Medium/
-        │   │   ├── problem_one.py
-        │   │   └── problem_two.py
-        │   ├── Hard/
-        │   │   ├── problem_one.py
-        │   │   └── problem_two.py
-        │   └── Very Hard/
-        │       ├── problem_one.py
-        │       └── problem_two.py
-        └── resources/
-            └── notes.md
+AlgoExpert/
+├── README.md
+├── LICENSE
+├── Easy/
+│   ├── problem_one.py
+│   └── problem_two.py
+├── Medium/
+│   ├── problem_one.py
+│   └── problem_two.py
+├── Hard/
+│   ├── problem_one.py
+│   └── problem_two.py
+└── Very Hard/
+    ├── problem_one.py
+    └── problem_two.py
 ```
 
 ## How to Run the Solutions
