@@ -2,18 +2,17 @@
 
 def isValidSubsequence(array, sequence):
     """
-    Finds two numbers in the array that add up to the target sum using a hash map.
+    Checks if the given sequence is a valid subsequence of the array.
 
     Thought Process:
-    1. Initialize an empty dictionary (`diffMap`) to store the numbers we’ve seen so far along with their indices.
-    2. Iterate through each number in the array:
-       - Calculate the difference (`diff`) needed to reach the target by subtracting the current number from the target.
-       - Check if this difference is already in the dictionary:
-         - If yes, return the corresponding number and the current index as a list (since they add up to the target).
-       - If not, add the current number and its index to the dictionary.
-    3. If no such pair exists after checking all numbers, the function implicitly returns `None`.
+    1. Initialize an index (`idx`) to track the position in the sequence.
+    2. Iterate through each item in the array:
+       - If the current item matches the current element in the sequence (at index `idx`):
+         - Increment the index to check the next element in the sequence.
+       - If `idx` reaches the length of the sequence, it means all elements have been found in order, so return True.
+    3. If the loop completes without finding all elements of the sequence, return False.
 
-    This approach has a time complexity of O(n) due to a single pass through the array and O(n) space for the hash map.
+    This approach has a time complexity of O(n), where n is the length of the array, and O(1) space complexity since no additional data structures are used.
     """
     idx = 0
     for item in array:
