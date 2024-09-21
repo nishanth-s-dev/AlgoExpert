@@ -1,22 +1,37 @@
+# Node
 class LinkedList:
     def __init__(self, value):
         self.value = value
         self.next = None
 
-
-# O(n) | O(n)
-def findLoopHashMethod(head):
-    hset = set()
+# O(n) Time | O(n) Space
+def findLoop(head):
+    """
+    * Initialize hashset
+    * Loop through the linked list
+    * If node not in hashset, add it. If node in hashset, we found the loop node. Simply return it.
+    * If loop ended without returning, return head
+    """
+    visitedNodes = set()
     current = head
     while current:
-        if current in hset:
+        if current in visitedNodes:
             return current
-        hset.add(current)
+        visitedNodes.add(current)
         current = current.next
-
     return head
 
+# O(n) Time | O(1) Space
 def findLoop(head):
+    """
+    * fast and slow pointer algorithm.
+    * check whether loop available or not with fast and slow pointer algo.
+    * If loop not exists, return head
+    * if loop exists
+        * set slow pointer to head
+        * move each pointer one by one
+        * when slow and fast pointer meets, that the loop node
+    """
     slow = fast = head
     while fast and fast.next:
         slow = slow.next
