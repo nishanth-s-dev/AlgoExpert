@@ -1,4 +1,20 @@
+# Problem : https://www.algoexpert.io/questions/tandem-bicycle
+
+
 def tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest):
+    """
+    Calculates the maximum total speed for tandem bicycles based on the arrangement of riders.
+
+    Thought Process:
+    1. Sort both the red and blue shirt speed lists.
+    2. If fastest is True, pair the fastest red shirt riders with the slowest blue shirt riders.
+    3. Use two pointers to sum the maximum speeds for each pair.
+    4. If fastest is False, simply pair the corresponding speeds directly.
+    5. Return the total speed.
+
+    Time Complexity: O(n log n), where n is the number of riders, due to sorting.
+    Space Complexity: O(1), as it uses a constant amount of extra space.
+    """
     redShirtSpeeds.sort()
     blueShirtSpeeds.sort()
     res = 0
