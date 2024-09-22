@@ -22,19 +22,21 @@ git clone https://github.com/nishanth-s-dev/AlgoExpert.git
 ```
 AlgoExpert/
 ├── README.md
-├── LICENSE
-├── Easy/
-│   ├── problem_one.py
-│   └── problem_two.py
-├── Medium/
-│   ├── problem_one.py
-│   └── problem_two.py
-├── Hard/
-│   ├── problem_one.py
-│   └── problem_two.py
-└── Very Hard/
-    ├── problem_one.py
-    └── problem_two.py
+├── python/
+│   ├── easy/
+│   │   ├── problem_one.py
+│   │   └── problem_two.py
+│   ├── medium/
+│   │   ├── problem_one.py
+│   │   └── problem_two.py
+│   ├── hard/
+│   │   ├── problem_one.py
+│   │   └── problem_two.py
+│   └── very-hard/
+│       ├── problem_one.py
+│       └── problem_two.py
+└── resources/
+    └── notes.md
 ```
 
 ## How to Run the Solutions
