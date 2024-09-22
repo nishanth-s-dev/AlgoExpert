@@ -1,4 +1,4 @@
-from collections import defaultdict
+# Problem : https://www.algoexpert.io/questions/semordnilap
 
 
 def semordnilap(words):
