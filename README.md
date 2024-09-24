@@ -23,36 +23,34 @@ git clone https://github.com/nishanth-s-dev/AlgoExpert.git
 AlgoExpert/
 ├── README.md
 ├── python/
-│   ├── easy/
-│   │   ├── category_one/
+│   ├── category_one/
+│   │   ├── easy/
 │   │   │   ├── problem_one.py
 │   │   │   └── problem_two.py
-│   │   ├── category_two/
+│   │   ├── medium/
 │   │   │   ├── problem_one.py
 │   │   │   └── problem_two.py
-│   ├── medium/
-│   │   ├── category_one/
+│   │   ├── hard/
 │   │   │   ├── problem_one.py
 │   │   │   └── problem_two.py
-│   │   ├── category_two/
+│   │   ├── very-hard/
 │   │   │   ├── problem_one.py
 │   │   │   └── problem_two.py
-│   ├── hard/
-│   │   ├── category_one/
+│   ├── category_two/
+│   │   ├── easy/
 │   │   │   ├── problem_one.py
 │   │   │   └── problem_two.py
-│   │   ├── category_two/
+│   │   ├── medium/
 │   │   │   ├── problem_one.py
 │   │   │   └── problem_two.py
-│   └── very-hard/
-│       ├── category_one/
-│       │   ├── problem_one.py
-│       │   └── problem_two.py
-│       ├── category_two/
-│       │   ├── problem_one.py
-│       │   └── problem_two.py
+│   │   ├── hard/
+│   │   │   ├── problem_one.py
+│   │   │   └── problem_two.py
+│   │   ├── very-hard/
+│   │   │   ├── problem_one.py
+│   │   │   └── problem_two.py
 └── resources/
-    └── notes.md
+    └── notes.m
 ```
 
 ## How to Run the Solutions
