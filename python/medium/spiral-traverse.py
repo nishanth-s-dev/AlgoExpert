@@ -58,3 +58,36 @@ def spiralTraverse(array):
         left += 1
 
     return res
+
+
+def spiralTraverse(array):
+    result = []
+    if not array:
+        return result
+
+    while array:
+        # Add first row
+        result += array.pop(0)
+
+        # Add every element in last column
+        if array and array[0]:
+            for row in array:
+                result.append(row.pop())
+
+        # Add last row in reverse
+        if array:
+            result += array.pop()[::-1]
+
+        # Add first column in reverse
+        if array and array[0]:
+            for row in array[::-1]:
+                result.append(row.pop(0))
+
+    return result
+
+
+if __name__ == '__main__':
+    print(spiralTraverse([[1, 2, 3, 4],
+                          [12, 13, 14, 5],
+                          [11, 16, 15, 6],
+                          [10, 9, 8, 7]]))
