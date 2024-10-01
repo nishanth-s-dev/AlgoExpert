@@ -6,18 +6,17 @@ class BST:
 
     def insert(self, value):
         new_node = BST(value)
-
         current = self
         while True:
-            if value < self.value:
-                if self.left is None:
-                    self.left = new_node
+            if value < current.value:
+                if current.left is None:
+                    current.left = new_node
                     break
                 else:
-                    current = self.left
+                    current = current.left
             else:
-                if self.right is None:
-                    self.right = new_node
+                if current.right is None:
+                    current.right = new_node
                     break
                 else:
                     current = current.right
@@ -27,7 +26,7 @@ class BST:
     def contains(self, value):
         current = self
         while True:
-            if value == self.value:
+            if value == current.value:
                 return True
             elif value < current.value:
                 if current.left is None:
