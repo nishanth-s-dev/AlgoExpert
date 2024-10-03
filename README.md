@@ -24,17 +24,33 @@ AlgoExpert/
 ├── README.md
 ├── python/
 │   ├── easy/
-│   │   ├── problem_one.py
-│   │   └── problem_two.py
+│   │   ├── category_one/
+│   │   │   ├── problem_one.py
+│   │   │   └── problem_two.py
+│   │   ├── category_two/
+│   │   │   ├── problem_one.py
+│   │   │   └── problem_two.py
 │   ├── medium/
-│   │   ├── problem_one.py
-│   │   └── problem_two.py
+│   │   ├── category_one/
+│   │   │   ├── problem_one.py
+│   │   │   └── problem_two.py
+│   │   ├── category_two/
+│   │   │   ├── problem_one.py
+│   │   │   └── problem_two.py
 │   ├── hard/
-│   │   ├── problem_one.py
-│   │   └── problem_two.py
+│   │   ├── category_one/
+│   │   │   ├── problem_one.py
+│   │   │   └── problem_two.py
+│   │   ├── category_two/
+│   │   │   ├── problem_one.py
+│   │   │   └── problem_two.py
 │   └── very-hard/
-│       ├── problem_one.py
-│       └── problem_two.py
+│       ├── category_one/
+│       │   ├── problem_one.py
+│       │   └── problem_two.py
+│       ├── category_two/
+│       │   ├── problem_one.py
+│       │   └── problem_two.py
 └── resources/
     └── notes.md
 ```
