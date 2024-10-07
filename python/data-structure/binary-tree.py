@@ -75,13 +75,34 @@ class BinaryTree:
 
     # Traversal
     def preorder(self):
-        pass
+        self._preorder_helper(self.root)
+
+    def _preorder_helper(self, node):
+        if node is None:
+            return
+        print(node.value, end = " ")
+        self._preorder_helper(node.left)
+        self._preorder_helper(node.right)
 
     def inorder(self):
-        pass
+        self._inorder_helper(self.root)
+
+    def _inorder_helper(self, node):
+        if node is None:
+            return
+        self._inorder_helper(node.left)
+        print(node.value, end = " ")
+        self._inorder_helper(node.right)
 
     def postorder(self):
-        pass
+        self._postorder_helper(self.root)
+
+    def _postorder_helper(self, node):
+        if node is None:
+            return
+        self._postorder_helper(node.left)
+        print(node.value, end = " ")
+        self._postorder_helper(node.right)
 
     def level_order(self):
         pass
@@ -139,7 +160,9 @@ if __name__ == '__main__':
     binary_tree.insert(4)
     binary_tree.insert(5)
     binary_tree.insert(6)
-    binary_tree.delete(6)
-    binary_tree.delete(5)
+    binary_tree.insert(7)
+    # binary_tree.delete(6)
+    # binary_tree.delete(5)
     print(binary_tree)
     print(binary_tree.contains(6))
+    binary_tree.preorder()
