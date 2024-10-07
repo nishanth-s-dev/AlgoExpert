@@ -105,7 +105,14 @@ class BinaryTree:
         self._postorder_helper(node.right)
 
     def level_order(self):
-        pass
+        queue = deque([self.root])
+        while queue:
+            current_node = queue.popleft()
+            print(current_node.value, end = " ")
+            if current_node.left:
+                queue.append(current_node.left)
+            if current_node.right:
+                queue.append(current_node.right)
 
     # Utility
     def find_height(self, value):
@@ -163,6 +170,7 @@ if __name__ == '__main__':
     binary_tree.insert(7)
     # binary_tree.delete(6)
     # binary_tree.delete(5)
-    print(binary_tree)
-    print(binary_tree.contains(6))
-    binary_tree.preorder()
+    # print(binary_tree)
+    # print(binary_tree.contains(6))
+    # binary_tree.preorder()
+    binary_tree.level_order()
