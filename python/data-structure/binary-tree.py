@@ -31,7 +31,37 @@ class BinaryTree:
                 queue.append(current_node.right)
 
     def delete(self, value):
-        pass
+        queue = deque([self.root])
+        to_delete = None
+        last_node = None
+        while queue:
+            last_node = queue.popleft()
+            if last_node.value == value:
+                to_delete = last_node
+                break
+            if last_node.left:
+                queue.append(last_node.left)
+            if last_node.right:
+                queue.append(last_node.right)
+
+        if to_delete:
+            to_delete.value = last_node.value
+            self._delete_last_node(self.root, last_node)
+
+    def _delete_last_node(self, node, last_node):
+        queue = deque([self.root])
+        while queue:
+            current_node = queue.popleft()
+            if current_node.left:
+                if current_node.left == last_node:
+                    current_node.left = None
+                    return
+                queue.append(current_node.left)
+            if current_node.right:
+                if current_node.right == last_node:
+                    current_node.right = None
+                    return
+                queue.append(current_node.right)
 
     def contains(self, value):
         return self._contains_helper(self.root, value)
@@ -109,5 +139,7 @@ if __name__ == '__main__':
     binary_tree.insert(4)
     binary_tree.insert(5)
     binary_tree.insert(6)
+    binary_tree.delete(6)
+    binary_tree.delete(5)
     print(binary_tree)
     print(binary_tree.contains(6))
