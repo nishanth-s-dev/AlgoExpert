@@ -34,7 +34,14 @@ class BinaryTree:
         pass
 
     def contains(self, value):
-        pass
+        return self._contains_helper(self.root, value)
+
+    def _contains_helper(self, node, value):
+        if node is None:
+            return False
+        if node.value == value:
+            return True
+        return self._contains_helper(node.left, value) or self._contains_helper(node.right, value)
 
     # Traversal
     def preorder(self):
@@ -103,3 +110,4 @@ if __name__ == '__main__':
     binary_tree.insert(5)
     binary_tree.insert(6)
     print(binary_tree)
+    print(binary_tree.contains(6))
