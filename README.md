@@ -1,4 +1,4 @@
-# AlgoExpert 🔥
+# AlgoExpert 🎯
 
 This repository contains my solutions to the problems on AlgoExpert, a platform for preparing for coding interviews. The solutions are organized by difficulty: Easy, Medium, Hard, and Very Hard.
 
