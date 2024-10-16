@@ -14,6 +14,16 @@ def invertBinaryTree(tree):
         if current.right is not None:
             queue.append(current.right)
 
+def invertBinaryTree(tree):
+    if tree is None:
+        return
+    swapLeftRight(tree)
+    invertBinaryTree(tree.left)
+    invertBinaryTree(tree.right)
+
+def swapLeftRight(node):
+    node.left, node.right = node.right, node.left
+
 def bfs(tree):
     if tree is None:
         print("Tree is empty")
