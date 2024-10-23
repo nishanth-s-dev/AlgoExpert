@@ -10,11 +10,10 @@ class BinaryTree:
 def getHeight(node):
     if node is None:
         return -1
-    left = getHeight(node.left) if node.left is not None else -1
-    right = getHeight(node.right) if node.right is not None else -1
-    return max(left, right) + 1
+    return 1 + max(getHeight(node.left), getHeight(node.right))
 
 
+def binaryTreeDiameter(tree):
     res = -1
     if tree is None:
         return res
