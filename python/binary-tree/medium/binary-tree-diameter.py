@@ -7,12 +7,14 @@ class BinaryTree:
         self.left = left
         self.right = right
 
+# O(n) Time
 def getHeight(node):
     if node is None:
         return -1
     return 1 + max(getHeight(node.left), getHeight(node.right))
 
 
+# O(n * n) Time
 def binaryTreeDiameter(tree):
     res = -1
     if tree is None:
@@ -31,3 +33,15 @@ def binaryTreeDiameter(tree):
         if left_height + right_height > res:
             res = left_height + right_height
     return res
+
+# O(n) Time
+def getHeightAndDiameter(node):
+    if node is None:
+        return [-1, 0]
+    leftHeight, leftDiameter = getHeightAndDiameter(node.left)
+    rightHeight, rightDiameter = getHeightAndDiameter(node.height)
+
+    currentHeight = 1 + max(leftHeight, rightHeight)
+    maxDiameter = max(leftDiameter, rightDiameter, 2 + leftHeight + rightHeight)
+    return [currentHeight, maxDiameter]
+
