@@ -23,7 +23,11 @@ def splitBinaryTree(tree):
         while queue:
             current = queue.popleft()
 
-            currentSum = getSum(current)
+            if current not in memo:
+                memo[current] = getSum(current)
+
+            currentSum = memo[current]
+
             if currentSum == expectedSum:
                 return currentSum
 
