@@ -12,39 +12,35 @@ class BinaryTree:
 def findSuccessor(tree, node):
     if node.right is not None:
         return getLeftMostChild(node.right)
+    if node.parent is not None:
+        return getRightMostParent(node)
 
-    return getRightMostParent(node)
+    return None
 
 
 def getLeftMostChild(node):
-    if node is None:
-        return node
-
-    currentNode = node
-    while currentNode.left:
-        currentNode = currentNode.left
-
-    return currentNode
+    while node.left is not None:
+        node = node.left
+    return node
 
 
 def getRightMostParent(node):
-    currentNode = node
+    while node.parent is not None and node.parent.right == node:
+        node = node.parent
 
-    while currentNode.parent is not None and currentNode.parent.right == currentNode:
-        currentNode = currentNode.parent
+    return node.parent
 
-    return currentNode.parent
 
 # O(n) Time | O(n) Space
-# def findSuccessor(tree, node):
-#     inorder_array = inorder_traversal(tree)
-#     for i in range(len(inorder_array) - 1):
-#         if inorder_array[i] == node:
-#             return inorder_array[i + 1]
-#
-#     return None
-#
-# def inorder_traversal(node):
-#     if node is None:
-#         return []
-#     return inorder_traversal(node.left) + [node] + inorder_traversal(node.right)
+def findSuccessor(tree, node):
+    inorder_array = inorder_traversal(tree)
+    for i in range(len(inorder_array) - 1):
+        if inorder_array[i] == node:
+            return inorder_array[i + 1]
+
+    return None
+
+def inorder_traversal(node):
+    if node is None:
+        return []
+    return inorder_traversal(node.left) + [node] + inorder_traversal(node.right)
