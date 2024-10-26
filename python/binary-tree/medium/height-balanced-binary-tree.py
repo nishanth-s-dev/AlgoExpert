@@ -8,6 +8,21 @@ class BinaryTree:
         self.left = left
         self.right = right
 
+# O(n) Time | O(n) space
+def heightBalancedBinaryTree(tree):
+    return checkBalance(tree)[1]
+
+def checkBalance(node):
+    if node is None:
+        return 0, True
+
+    leftHeight, leftBalance = checkBalance(node.left)
+    rightHeight, rightBalance = checkBalance(node.right)
+
+    currentHeight = max(leftHeight, rightHeight) + 1
+    isBalanced = currentHeight <= 1
+
+    return currentHeight, isBalanced
 
 # O(n) Time | O(1) Space
 def heightBalancedBinaryTree(tree):
@@ -31,7 +46,6 @@ def heightBalancedBinaryTree(tree):
             queue.append(current.right)
 
     return True
-
 
 def getHeight(node):
     return 0 if node is None else max(getHeight(node.left), getHeight(node.right)) + 1
