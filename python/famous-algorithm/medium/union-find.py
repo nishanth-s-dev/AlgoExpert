@@ -7,7 +7,8 @@ class UnionFind:
 
     # O(1) Time | O(1) Space
     def createSet(self, value):
-        self.parents[value] = value
+        if value not in self.parents:
+            self.parents[value] = value
 
     # O(n) Time | O(1) Space
     def find(self, value):
@@ -34,8 +35,9 @@ class UnionFind:
 
     # O(1) Time | O(1) Space
     def createSet(self, value):
-        self.parents[value] = value
-        self.ranks[value] = 0
+        if value not in self.parents:
+            self.parents[value] = value
+            self.ranks[value] = 0
 
     # O(log n) Time | O(1) Space
     def find(self, value):
