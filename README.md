@@ -1,3 +1,8 @@
+## Important Note
+All platform specific codes moved to single repo.
+https://github.com/nishanth-s-dev/problem-solving.git
+
+
 # AlgoExpert 🎯
 
 This repository contains my solutions to the problems on AlgoExpert, a platform for preparing for coding interviews. The solutions are organized by difficulty: Easy, Medium, Hard, and Very Hard.
